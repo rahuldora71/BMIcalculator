@@ -1,38 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
+
     android:id="@+id/llmain"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_wt"
+            android:id="@+id/edtWeight"
+            android:inputType="number"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/wtSpinner"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hint_wt"
-        android:id="@+id/edtWeight"
-        android:inputType="number"
-         />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="5"
         android:inputType="number"
         android:hint="@string/hint_htF"
         android:id="@+id/edtHeight"
         />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/edtHeightIn"
-        android:inputType="number"
-        android:hint="@string/hint_htI"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:id="@+id/edtHeightIn"
+            android:inputType="number"
+            android:hint="@string/hint_htI"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/htSpinner"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,8 +93,33 @@
         android:layout_marginTop="11dp"
         />
 
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bmiIndicator"
+        android:layout_width="405.05dp"
+        android:layout_height="305dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/bmi" />
+
+    <ImageView
+        android:id="@+id/bmiPin"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:layout_alignStart="@+id/bmiIndicator"
+        android:layout_alignEnd="@+id/bmiIndicator"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="169dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="82dp"
+        android:src="@drawable/pin" />
 
 
-
-
-</LinearLayout>
+</RelativeLayout>
